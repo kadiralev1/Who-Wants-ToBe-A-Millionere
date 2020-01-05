@@ -1,0 +1,8 @@
+medium
+1
+Which one is not a programming language ? 
+Html
+Html
+Javascript
+Java
+Swift

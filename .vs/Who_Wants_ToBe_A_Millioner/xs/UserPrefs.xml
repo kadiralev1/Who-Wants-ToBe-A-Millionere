@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{3FC80BA7-7260-4EF0-80F3-5A96C806B6AA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Who_Wants_ToBe_A_Millioner/Administration.cs">
+    <Files>
+      <File FileName="Who_Wants_ToBe_A_Millioner/Program.cs" Line="1" Column="1" />
+      <File FileName="Who_Wants_ToBe_A_Millioner/QuestionModel.cs" />
+      <File FileName="Who_Wants_ToBe_A_Millioner/Administration.cs" Line="19" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Who_Wants_ToBe_A_Millioner" expanded="True">
+            <Node name="Who_Wants_ToBe_A_Millioner" expanded="True">
+              <Node name="Administration.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|anycpu" />
+  <MonoDevelop.Ide.ItemProperties.Who__Wants__ToBe__A__Millioner FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
