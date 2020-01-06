@@ -1,16 +1,16 @@
 easy
 1
-İlk yapay koyun
-Dolly
-Ladi
-Dolle
-Star
-Dolly
+EasyFiledenemesorusu
+busayfa
+busayfa
+digersayfa
+öncekısayfa
+ilerdekisayfa
 easy
 2
-Aşağıdakilerden hangisi kıskaçlara sahiptir?
-Yengeç
-Istakoz
-Yengeç
-Ahtapot
-Flamingo
+easyinedeneme
+1
+1
+2
+3
+4

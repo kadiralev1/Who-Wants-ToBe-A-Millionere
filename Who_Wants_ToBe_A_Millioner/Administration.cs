@@ -215,7 +215,190 @@ namespace Who_Wants_ToBe_A_Millioner
 
         public void addNewQuestion()
         {
+            List<QuestionModel> temporaryList = new List<QuestionModel>();
 
+            Console.WriteLine("Hnagi kategoriye soru eklemek istiyorsunuz ?");
+            string aCategoryType = Console.ReadLine();
+
+            if (aCategoryType.ToLower().Equals("easy"))
+            {
+                // get all question easy file
+                StreamReader reader = new StreamReader("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt");
+
+                while (reader.EndOfStream == false)
+                {
+                    QuestionModel question = new QuestionModel();
+
+                    question.category = reader.ReadLine();
+                    question.id = reader.ReadLine();
+                    question.questionBody = reader.ReadLine();
+                    question.correctAnswer = reader.ReadLine();
+                    question.optionA = reader.ReadLine();
+                    question.optionB = reader.ReadLine();
+                    question.optionC = reader.ReadLine();
+                    question.optionD = reader.ReadLine();
+                    temporaryList.Add(question)
+;                }
+                reader.Close();
+
+                foreach (var question in temporaryList)
+                {
+
+                    Console.WriteLine(question.id + ") Category: " + question.category + "\n \n" + question.questionBody + "\n\n" + " A) " + question.optionA
+                        + " B) " + question.optionB + " C) " + question.optionC + " D) " + question.optionD + "\n");
+
+                }
+
+                Console.WriteLine("Question id(order)");
+                string aId = Console.ReadLine();
+                Console.WriteLine("Question body");
+                string aQuestionBody = Console.ReadLine();
+                Console.WriteLine("Enter the correct answer: ");
+                string aCorrectAnswer = Console.ReadLine();
+                Console.WriteLine("Enter the option A: ");
+                string aOptionA = Console.ReadLine();
+                Console.WriteLine("Enter the option B: ");
+                string aOptionB = Console.ReadLine();
+                Console.WriteLine("Enter the option C: ");
+                string aOptionC = Console.ReadLine();
+                Console.WriteLine("Enter the option D: ");
+                string aOptionD = Console.ReadLine();
+
+                TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt",true);
+                writer.WriteLine(aCategoryType);
+                writer.WriteLine(aId);
+                writer.WriteLine(aQuestionBody);
+                writer.WriteLine(aCorrectAnswer);
+                writer.WriteLine(aOptionA);
+                writer.WriteLine(aOptionB);
+                writer.WriteLine(aOptionC);
+                writer.WriteLine(aOptionD);
+
+                writer.Close();
+
+                Console.WriteLine("Question is added ");
+                getMenu();
+            }
+            else if (aCategoryType.ToLower().Equals("medium"))
+            {
+                // get all question easy file
+                StreamReader reader = new StreamReader("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Medium.txt");
+
+                while (reader.EndOfStream == false)
+                {
+                    QuestionModel question = new QuestionModel();
+
+                    question.category = reader.ReadLine();
+                    question.id = reader.ReadLine();
+                    question.questionBody = reader.ReadLine();
+                    question.correctAnswer = reader.ReadLine();
+                    question.optionA = reader.ReadLine();
+                    question.optionB = reader.ReadLine();
+                    question.optionC = reader.ReadLine();
+                    question.optionD = reader.ReadLine();
+                    temporaryList.Add(question)
+;
+                }
+                reader.Close();
+
+                foreach (var question in temporaryList)
+                {
+
+                    Console.WriteLine(question.id + ") Category: " + question.category + "\n \n" + question.questionBody + "\n\n" + " A) " + question.optionA
+                        + " B) " + question.optionB + " C) " + question.optionC + " D) " + question.optionD + "\n");
+
+                }
+
+                Console.WriteLine("Question id(order)");
+                string aId = Console.ReadLine();
+                Console.WriteLine("Question body");
+                string aQuestionBody = Console.ReadLine();
+                Console.WriteLine("Enter the correct answer: ");
+                string aCorrectAnswer = Console.ReadLine();
+                Console.WriteLine("Enter the option A: ");
+                string aOptionA = Console.ReadLine();
+                Console.WriteLine("Enter the option B: ");
+                string aOptionB = Console.ReadLine();
+                Console.WriteLine("Enter the option C: ");
+                string aOptionC = Console.ReadLine();
+                Console.WriteLine("Enter the option D: ");
+                string aOptionD = Console.ReadLine();
+
+                TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Medium.txt",true);
+                writer.WriteLine(aCategoryType);
+                writer.WriteLine(aId);
+                writer.WriteLine(aQuestionBody);
+                writer.WriteLine(aCorrectAnswer);
+                writer.WriteLine(aOptionA);
+                writer.WriteLine(aOptionB);
+                writer.WriteLine(aOptionC);
+                writer.WriteLine(aOptionD);
+
+                writer.Close();
+
+                Console.WriteLine("Question is added ");
+                getMenu();
+            }
+            else
+            {
+                // get all question easy file
+                StreamReader reader = new StreamReader("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Hard.txt");
+
+                while (reader.EndOfStream == false)
+                {
+                    QuestionModel question = new QuestionModel();
+
+                    question.category = reader.ReadLine();
+                    question.id = reader.ReadLine();
+                    question.questionBody = reader.ReadLine();
+                    question.correctAnswer = reader.ReadLine();
+                    question.optionA = reader.ReadLine();
+                    question.optionB = reader.ReadLine();
+                    question.optionC = reader.ReadLine();
+                    question.optionD = reader.ReadLine();
+                    temporaryList.Add(question)
+;
+                }
+                reader.Close();
+
+                foreach (var question in temporaryList)
+                {
+
+                    Console.WriteLine(question.id + ") Category: " + question.category + "\n \n" + question.questionBody + "\n\n" + " A) " + question.optionA
+                        + " B) " + question.optionB + " C) " + question.optionC + " D) " + question.optionD + "\n");
+
+                }
+
+                Console.WriteLine("Question id(order)");
+                string aId = Console.ReadLine();
+                Console.WriteLine("Question body");
+                string aQuestionBody = Console.ReadLine();
+                Console.WriteLine("Enter the correct answer: ");
+                string aCorrectAnswer = Console.ReadLine();
+                Console.WriteLine("Enter the option A: ");
+                string aOptionA = Console.ReadLine();
+                Console.WriteLine("Enter the option B: ");
+                string aOptionB = Console.ReadLine();
+                Console.WriteLine("Enter the option C: ");
+                string aOptionC = Console.ReadLine();
+                Console.WriteLine("Enter the option D: ");
+                string aOptionD = Console.ReadLine();
+
+                TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Hard.txt",true);
+                writer.WriteLine(aCategoryType);
+                writer.WriteLine(aId);
+                writer.WriteLine(aQuestionBody);
+                writer.WriteLine(aCorrectAnswer);
+                writer.WriteLine(aOptionA);
+                writer.WriteLine(aOptionB);
+                writer.WriteLine(aOptionC);
+                writer.WriteLine(aOptionD);
+
+                writer.Close();
+
+                Console.WriteLine("Question is added ");
+                getMenu();
+            }
         }
 
         public void removeQuestion()
