@@ -69,6 +69,7 @@ namespace Who_Wants_ToBe_A_Millioner
             ///Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt
             for (int k = 0; k < categories.Length; k++)
             {
+                int i = 1;
                 StreamReader reader = new StreamReader("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/"+categories[k]+".txt");
                 
                 while (reader.EndOfStream == false)
@@ -77,7 +78,7 @@ namespace Who_Wants_ToBe_A_Millioner
 
                     QuestionModel newQuestion = new QuestionModel();
                     newQuestion.category = reader.ReadLine();
-                    newQuestion.id = reader.ReadLine();
+                    newQuestion.id = i;
                     newQuestion.questionBody = reader.ReadLine();
                     newQuestion.correctAnswer = reader.ReadLine();
                     newQuestion.optionA = reader.ReadLine();
@@ -86,7 +87,7 @@ namespace Who_Wants_ToBe_A_Millioner
                     newQuestion.optionD = reader.ReadLine();
                     
                     questionStore.Add(newQuestion);
-                    
+                    i++;
                 }
                 
                 reader.Close();
@@ -110,7 +111,7 @@ namespace Who_Wants_ToBe_A_Millioner
             Console.WriteLine("Hangi kategori de ki soruyu değiştirmek istiyorsunuz ? ");
             string category = Console.ReadLine();
             Console.WriteLine("Soru id: ");
-            string id = Console.ReadLine();
+            int id = int.Parse(Console.ReadLine());
             Console.WriteLine("Yeni soruyu giriniz: ");
             string newQuestionBody = Console.ReadLine();
             editQuestion(category, id, newQuestionBody);
@@ -119,14 +120,14 @@ namespace Who_Wants_ToBe_A_Millioner
 
 
 
-        public void editQuestion(string category,string id, string newQuestionBody)
+        public void editQuestion(string category,int id, string newQuestionBody)
         {
             if(category.ToLower() == "easy")
             {
 
                 foreach (var question in questionStore)
                 {
-                    if (question.category.Equals(category) && question.id.Equals(id))
+                    if (question.category.Equals(category) && question.id == id)
                     {
                         question.questionBody = newQuestionBody;
                     }
@@ -140,7 +141,6 @@ namespace Who_Wants_ToBe_A_Millioner
                     {
                         
                         tw.WriteLine(question.category);
-                        tw.WriteLine(question.id);
                         tw.WriteLine(question.questionBody);
                         tw.WriteLine(question.correctAnswer);
                         tw.WriteLine(question.optionA);
@@ -155,7 +155,7 @@ namespace Who_Wants_ToBe_A_Millioner
             {
                 foreach (var question in questionStore)
                 {
-                    if (question.category.Equals(category) && question.id.Equals(id))
+                    if (question.category.Equals(category) && question.id == id)
                     {
                         question.questionBody = newQuestionBody;
                     }
@@ -169,7 +169,6 @@ namespace Who_Wants_ToBe_A_Millioner
                     {
 
                         tw.WriteLine(question.category);
-                        tw.WriteLine(question.id);
                         tw.WriteLine(question.questionBody);
                         tw.WriteLine(question.correctAnswer);
                         tw.WriteLine(question.optionA);
@@ -186,7 +185,7 @@ namespace Who_Wants_ToBe_A_Millioner
             {
                 foreach (var question in questionStore)
                 {
-                    if (question.category.Equals(category) && question.id.Equals(id))
+                    if (question.category.Equals(category) && question.id == id)
                     {
                         question.questionBody = newQuestionBody;
                     }
@@ -200,7 +199,6 @@ namespace Who_Wants_ToBe_A_Millioner
                     {
 
                         tw.WriteLine(question.category);
-                        tw.WriteLine(question.id);
                         tw.WriteLine(question.questionBody);
                         tw.WriteLine(question.correctAnswer);
                         tw.WriteLine(question.optionA);
@@ -230,7 +228,6 @@ namespace Who_Wants_ToBe_A_Millioner
                     QuestionModel question = new QuestionModel();
 
                     question.category = reader.ReadLine();
-                    question.id = reader.ReadLine();
                     question.questionBody = reader.ReadLine();
                     question.correctAnswer = reader.ReadLine();
                     question.optionA = reader.ReadLine();
@@ -249,8 +246,7 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 }
 
-                Console.WriteLine("Question id(order)");
-                string aId = Console.ReadLine();
+                
                 Console.WriteLine("Question body");
                 string aQuestionBody = Console.ReadLine();
                 Console.WriteLine("Enter the correct answer: ");
@@ -266,7 +262,6 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt",true);
                 writer.WriteLine(aCategoryType);
-                writer.WriteLine(aId);
                 writer.WriteLine(aQuestionBody);
                 writer.WriteLine(aCorrectAnswer);
                 writer.WriteLine(aOptionA);
@@ -289,7 +284,6 @@ namespace Who_Wants_ToBe_A_Millioner
                     QuestionModel question = new QuestionModel();
 
                     question.category = reader.ReadLine();
-                    question.id = reader.ReadLine();
                     question.questionBody = reader.ReadLine();
                     question.correctAnswer = reader.ReadLine();
                     question.optionA = reader.ReadLine();
@@ -309,8 +303,7 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 }
 
-                Console.WriteLine("Question id(order)");
-                string aId = Console.ReadLine();
+                
                 Console.WriteLine("Question body");
                 string aQuestionBody = Console.ReadLine();
                 Console.WriteLine("Enter the correct answer: ");
@@ -326,7 +319,6 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Medium.txt",true);
                 writer.WriteLine(aCategoryType);
-                writer.WriteLine(aId);
                 writer.WriteLine(aQuestionBody);
                 writer.WriteLine(aCorrectAnswer);
                 writer.WriteLine(aOptionA);
@@ -349,15 +341,13 @@ namespace Who_Wants_ToBe_A_Millioner
                     QuestionModel question = new QuestionModel();
 
                     question.category = reader.ReadLine();
-                    question.id = reader.ReadLine();
                     question.questionBody = reader.ReadLine();
                     question.correctAnswer = reader.ReadLine();
                     question.optionA = reader.ReadLine();
                     question.optionB = reader.ReadLine();
                     question.optionC = reader.ReadLine();
                     question.optionD = reader.ReadLine();
-                    temporaryList.Add(question)
-;
+                    temporaryList.Add(question);
                 }
                 reader.Close();
 
@@ -369,8 +359,7 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 }
 
-                Console.WriteLine("Question id(order)");
-                string aId = Console.ReadLine();
+                
                 Console.WriteLine("Question body");
                 string aQuestionBody = Console.ReadLine();
                 Console.WriteLine("Enter the correct answer: ");
@@ -386,7 +375,6 @@ namespace Who_Wants_ToBe_A_Millioner
 
                 TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Hard.txt",true);
                 writer.WriteLine(aCategoryType);
-                writer.WriteLine(aId);
                 writer.WriteLine(aQuestionBody);
                 writer.WriteLine(aCorrectAnswer);
                 writer.WriteLine(aOptionA);
@@ -403,7 +391,53 @@ namespace Who_Wants_ToBe_A_Millioner
 
         public void removeQuestion()
         {
+            getAllQuestions();
+            Console.WriteLine("Enter the question category : ");
+            string questionCategory = Console.ReadLine();
+            Console.WriteLine("Enter the question Id : ");
+            int questionId = int.Parse(Console.ReadLine());
 
+            /*
+                1- ) foreach ile questionların uzeronden geç ve category id uyanı bul foreach içinde if kontrolu
+                2-) Daha sonra buldugunda bu questionı sil
+                3-) o foreach bitince ikinci foreach içinde yine questionlar içinde dolaş
+                4-) sonraki foreache girmeden önce seçilen category de ki soruları sil
+                5-) yeni bir foreach ile ve içinde if kontrolu ile yeni soru listinin içinde ki o kategoriye uygun soruları ekle
+             */
+
+            foreach (var removeQuestion in questionStore)
+            {
+                if (removeQuestion.category.Equals(questionCategory.ToLower()) && removeQuestion.id == questionId)
+                {
+                    Console.Write("quetion removed");
+                    questionStore.Remove(removeQuestion);
+                }
+            }
+
+            if (questionCategory.Equals("easy"))
+            {
+                Console.WriteLine("first if");
+                File.WriteAllText("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt",string.Empty);
+                TextWriter writer = new StreamWriter("/Users/kadirkutluhanalev/Desktop/Who_Wants_ToBe_A_Millioner/Easy.txt", true);
+                foreach (var question in questionStore)
+                {
+                    if (question.category.Equals("easy"))
+                    {
+                        Console.WriteLine("question aded");
+                        writer.WriteLine(question.category);
+                        writer.WriteLine(question.questionBody);
+                        writer.WriteLine(question.correctAnswer);
+                        writer.WriteLine(question.optionA);
+                        writer.WriteLine(question.optionB);
+                        writer.WriteLine(question.optionC);
+                        writer.WriteLine(question.optionD);
+                    }
+                }
+                writer.Close();
+            }else
+            {
+                Console.WriteLine("başka ne mk ");
+            }
         }
     }
 }

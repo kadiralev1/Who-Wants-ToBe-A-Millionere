@@ -11,6 +11,6 @@ namespace Who_Wants_ToBe_A_Millioner
         public string optionB { get; set; }
         public string optionC { get; set; }
         public string optionD { get; set; }
-        public string id { get; set; }
+        public int id { get; set; }
     }
 }

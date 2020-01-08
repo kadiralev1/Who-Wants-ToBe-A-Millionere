@@ -1,16 +1,14 @@
 hard
-1
-Franz kafka'nın dönüşüm kitabında Samsa hangi hayvana dönüşmüştür?
-Hamamböceği
-Yılan
-Salyangoz
-Hamamböceği
-Örümcek
+Denemesoruhard
+Correct
+Y1
+Y2
+Y3
+Correct
 hard
-2
-Youtube da en çok dinlenen şarkı 
-Luis Fonsi Despacito
-Shape of you 
-Luis Fonsi Despacito
-Uptown Funk
-See you again
+Denemesoru2hard
+Correct2
+Y1
+Y2
+Y3
+Correct2
